@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: admission-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/admission_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+server:
+  port: 8085
