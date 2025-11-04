@@ -1,0 +1,20 @@
+spring:
+  profiles: prod
+
+  datasource:
+    url: jdbc:mysql://db-prod.company.com:3306/courses_db_prod?useSSL=false&serverTimezone=UTC
+    username: prod_user
+    password: prod_secure_password
+
+server:
+  port: 8087
+
+logging:
+  level:
+    root: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
